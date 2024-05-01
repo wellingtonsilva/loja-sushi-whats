@@ -30,7 +30,7 @@ export const ProductItem = ({item}: Props) => {
     <div>
         <div className='rounded-md overflow-hidden'>   
             <img
-                className='w-full h-32 object-cover' 
+                className='w-full h-40 object-cover' 
                 src={item.image} 
                 alt={item.name} 
             />

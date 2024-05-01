@@ -3,7 +3,7 @@ import { getAllProducts } from '@/services/products'
 import { Product } from '@/types/product';
 import { ProductEmpty } from '@/components/products/empty';
 import { ProductItem } from '@/components/products/item';
-
+import { ScrollArea, ScrollBar  } from "@/components/ui/scroll-area"
 type Tab = {
     title:string;
     value: string;
@@ -39,13 +39,16 @@ export const ProductsTab = async () => {
 
   return (
     <Tabs defaultValue='sushi'>
+        <ScrollArea className='w-full whitespace-nowrap rounded-md'>
         <TabsList className='flex'>
             {tabs.map((item) => (
-                <TabsTrigger key={item.value} value={item.value} className='flex-1'>
+                <TabsTrigger key={item.value} value={item.value} className='flex-1 font-semibold'>
                     {item.title}
                 </TabsTrigger>
             ))}
         </TabsList>
+        <ScrollBar orientation="horizontal" />
+        </ScrollArea>
 
         {tabs.map((item) => (
             <TabsContent key={item.value} value={item.value} className='mt-6'>
