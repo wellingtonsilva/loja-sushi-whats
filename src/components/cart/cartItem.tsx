@@ -1,6 +1,7 @@
 import { Cart } from '@/types/cart'
 import { formatCurrency } from '@/utils/formatterCurrency'
 import React from 'react'
+import { ItemQuantity } from './ItemQuantity'
 
 type Props = {
     item: Cart
@@ -17,7 +18,7 @@ export const CartItem = ({item}: Props) => {
         <p className='text-xs opacity-50'>{formatCurrency(item.product.price)}</p>
        </div>
        <div className='flex-1'>
-        ....
+        <ItemQuantity cartItem={item} />
        </div>
     </div>
   )
