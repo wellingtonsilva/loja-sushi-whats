@@ -55,7 +55,7 @@ export const products: Product[] = [
         category: 'sushi',
         name: 'Sushi 8',
         image: '/images/sushi/sushi8.png',
-        price: 49
+        price: 49.05
     },
     {
         id: 9,

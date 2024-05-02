@@ -37,7 +37,7 @@ export const ProductItem = ({item}: Props) => {
             <div className='flex mt-3 flex-col gap-2'>
                 <p className='text-lg'>{item.name}</p>
                 <p className='text-sm opacity-60'>{formatCurrency(item.price)}</p>
-                <Button variant="outline" onClick={handleAddButton}>Adcionar</Button>
+                <Button variant="outline" onClick={handleAddButton}>Adicionar</Button>
             </div>
             
         </div>

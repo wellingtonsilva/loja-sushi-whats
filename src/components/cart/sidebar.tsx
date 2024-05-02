@@ -1,15 +1,18 @@
 "use client"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { RocketIcon } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import { useCartStore } from '@/stores/cart-store'
 import { formatCurrency } from '@/utils/formatterCurrency'
 import { CartItem } from '@/components/cart/cartItem'
+import { CheckoutDialog } from '@/components/checkout/dialog'
 
 
 export const Sidebar = () => {
+
+    const [checkotOpen, setCheckoutOpen] = useState(false)
 
     const {cart, upsertCartItem} = useCartStore(state => state) 
 
@@ -57,8 +60,13 @@ export const Sidebar = () => {
             <div className='text-center'>
                 <Button
                     disabled={cart.length === 0}
-                >Finalizar</Button>
+                    onClick={() => setCheckoutOpen(true) }
+                >
+                    Finalizar
+                </Button>
             </div>
+
+            <CheckoutDialog open={checkotOpen} onOpenChange={setCheckoutOpen} />
 
         </SheetContent>
         </Sheet>
