@@ -1,4 +1,4 @@
-# Loja Zap
+# Loja Sushi Whats
 
 - Next.Js
 - Typescript
@@ -7,7 +7,7 @@
 - Theme Dark/Light
 - Zustand
 
-<img src="public/images/lojazap.png" width="700px" alt="Print Loja Zap">
+<img src="public/images/lojazap.png" width="700px" alt="Print Loja Sushi Whats">
 
 ## Executando o projeto:
 - Para executar o projeto, siga estas etapas:
