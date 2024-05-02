@@ -1,5 +1,5 @@
 import { Address } from "cluster";
-import { State, create } from "zustand";
+import { create } from "zustand";
 
 type States = {
     name:string;

@@ -1,14 +1,13 @@
 "use client"
 import { CheckoutSteps } from "@/types/checkoutSteps"
 import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from 'zod'
-
-import { useCheckoutStore } from "@/stores/checkout-store"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import {Select, SelectItem, SelectTrigger, SelectValue, SelectContent } from "@/components/ui/select"
+import { useCheckoutStore } from "@/stores/checkout-store"
 
 type Props = {
     setStep: React.Dispatch<React.SetStateAction<CheckoutSteps>>
@@ -155,7 +154,7 @@ export const StepAddress = ({setStep}: Props) => {
         </div>
         <div className="flex justify-between mt-4">
             <Button type="submit" variant='link' onClick={() => setStep('user')}>Voltar</Button>
-            <Button type="submit" variant='default'>Concluir</Button>
+            <Button type="submit" variant='default'>Proximo</Button>
         </div>
        
     </form>

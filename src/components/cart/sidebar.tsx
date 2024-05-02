@@ -14,7 +14,9 @@ export const Sidebar = () => {
 
     const [checkotOpen, setCheckoutOpen] = useState(false)
 
-    const {cart, upsertCartItem} = useCartStore(state => state) 
+    const {cart} = useCartStore(state => state) 
+
+    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
     let subTotal = 0
     for(let item of cart){
@@ -29,7 +31,7 @@ export const Sidebar = () => {
                 <RocketIcon className='mr-2' />
                 <p>Carrinho</p>
                 {cart.length > 0 && 
-                    <div className='absolute flex items-center justify-center font-bold size-6 bg-green-600 rounded-full -right-3 -top-2'>{cart.length}</div>
+                    <div className='absolute flex items-center justify-center font-bold size-6 bg-green-600 rounded-full -right-3 -top-2'>{totalQuantity}</div>
                 }
             </Button>
         </SheetTrigger>

@@ -52,7 +52,7 @@ export const StepUser = ({setStep}: Props) => {
             </FormItem>
         )}
         />
-        <Button type="submit" variant='outline'>Próximo</Button>
+        <Button type="submit">Próximo</Button>
     </form>
    </Form>
   )
